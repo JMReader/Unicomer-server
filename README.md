@@ -2,7 +2,6 @@
 Server enfocado al backend del proyecto Unicomer.
 Lista de endpoints (el servidor correr en el puerto 3000): 
 
---------------------------------------------------------------
 POST user/login: la peticion nos devolvera todos lo datos de un usuario, para eso en el body debermos enviarle un json con los campos dni y clave si estos dos coinciden con una clave y usuario guardados en la base de datos se devolvera un json parecido al siguiente :
 ![image](https://user-images.githubusercontent.com/80925718/216147409-b6ce0ac7-1ff2-4885-ac76-63c759f54c05.png)
 en caso contrario la respuesta a ala peticion nos indicaria que el usuario y/o la clave son incorrectos.
@@ -11,7 +10,7 @@ POST user/register: la peticion creara un usuario y lo guardara en la base de da
 
 ![image](https://user-images.githubusercontent.com/80925718/216147828-e8e373bb-2440-4534-ba99-afb2bab90c8c.png)
 
-los puntos no dbeen ser enviados porque se al ser un usuario nuevo se guardaran setearan automaticamente en 500.
+los puntos no deben ser enviados porque se al ser un usuario nuevo se guardaran setearan automaticamente en 500.
 
 ------------------------------------------------------------------
 POST /tarjetas/crear : la peticion creara una tajeta de debito o credito y la guardara en la base de datos la peticion debe obtener los siguientes campos mediante el body de la misma:
