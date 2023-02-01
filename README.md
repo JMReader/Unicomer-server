@@ -14,7 +14,9 @@ los puntos no deben ser enviados porque se al ser un usuario nuevo se guardaran 
 
 ------------------------------------------------------------------
 POST /tarjetas/crear : la peticion creara una tajeta de debito o credito y la guardara en la base de datos la peticion debe obtener los siguientes campos mediante el body de la misma:
+
 ![image](https://user-images.githubusercontent.com/80925718/216145000-6f1a0381-6652-405a-aae9-203f306e7c6e.png)
+
 como podemos ver el campo nombre de usuario no es necesario ya que para cargar una tarjeta primero debemos tener un usuario ya existente, el cual cargara la tarjeta, entonces obtendremos el nombre del usuario con el dni del mismo.
 la peticion en caso de ser correcta nos devolver un json con dos campos, el "status" en uno y el "msg" de que la tarjeta fue guardad correctamente
 Get /tarjetas/user/:userid: La peticion nos traera en un json todos las tajetas asigandas a un usuario de la aplicacion previamente cargado, ledebemos enviar dentro de la peticion un userid como parametro. 
