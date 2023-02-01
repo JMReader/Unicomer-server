@@ -15,13 +15,17 @@ POST /tarjetas/crear : la peticion creara una tajeta de debito o credito y la gu
 como podemos ver el campo nombre de usuario no es necesario ya que para cargar una tarjeta primero debemos tener un usuario ya existente, el cual cargara la tarjeta, entonces obtendremos el nombre del usuario con el dni del mismo.
 la peticion en caso de ser correcta nos devolver un json con dos campos, el "status" en uno y el "msg" de que la tarjeta fue guardad correctamente
 Get /tarjetas/user/:userid: La peticion nos traera en un json todos las tajetas asigandas a un usuario de la aplicacion previamente cargado, ledebemos enviar dentro de la peticion un userid como parametro. 
-En caso de que la peticion sea correcta nos devolvera un json parecido a este:
+En caso de que la peticion sea correcta nos devolvera un json parecido a este:7
+
 ![image](https://user-images.githubusercontent.com/80925718/216146467-e48f1c0e-5ba0-4da7-810d-03a6cb1b1d65.png)
+
  donde el campo tarjetas sera un array de las tarjetas al nombre del usuaruio especificado en la peticion 
  ------------------------------------------------------------------------
  POST /menu/opcion 
   esta peticion permite cargar una opcion a un menu, el cual debe ser indicado en el parametro idmenu, en caso de no ser indicado se creara un nuevo menu y se le agregara esta opcion. La peticion espera el siguiente json en el body : 
+  
 ![image](https://user-images.githubusercontent.com/80925718/216151685-80b46ac9-985a-47dd-be87-080420d47e03.png)
+
 donde url hace referencia a la url a la que llevara la opcion y icon el nombre del icono de fontawesome que deseamos usar en nuestra opcion 
  GET /menu/completo
  Nos devolvera un menu, podemos indicar cual mediante el parametro idmenu pero en caso de no aclarar que menu deseaos traer la peticion nos devolvera el primer menu ya que esta pensado para en una primera instancia no tener mas de un menu por base de datos (si no hay ningun menu en la base de datos esta peticion nos indicara que debemos crear uno)
